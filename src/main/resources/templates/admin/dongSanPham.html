@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http:/www.thymeleaf.org"
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{/admin/index}">
 
@@ -79,11 +79,12 @@
 
 
                                 <tbody>
-                                <tr >
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                <tr th:each="ds : ${dongsp}">
+
+                                    <td th:text=${ds.ten}></td>
+                                    <td th:text=${ds.thuongHieu}></td>
+                                    <td th:text=${ds.ngayTao}></td>
+                                    <td th:text=${ds.ngayCapNhat}></td>
                                     <td>
                                         <button data-bs-toggle="modal"
                                                 data-bs-target="#update"
